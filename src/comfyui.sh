@@ -4,11 +4,13 @@
 USER_NAME=$(whoami)
 USER_HOME=$(eval echo ~$USER_NAME)
 
+# install packages
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
+pip install onnxruntime-gpu==1.18.0
+
 # install ComfyUI
 git clone https://github.com/comfyanonymous/ComfyUI
 pip install -r ComfyUI/requirements.txt
-pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
-pip install onnxruntime-gpu==1.18.0
 
 # install ComfyUI Manager
 git clone https://github.com/ltdrdata/ComfyUI-Manager.git $USER_HOME/ComfyUI/custom_nodes/ComfyUI-Manager
