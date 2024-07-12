@@ -97,7 +97,7 @@
     },
     {
       "id": 32,
-      "type": "Text box",
+      "type": "DF_Text_Box",
       "pos": [
         -400,
         60
@@ -122,7 +122,7 @@
       ],
       "title": "Image Description",
       "properties": {
-        "Node name for S&R": "Text box"
+        "Node name for S&R": "DF_Text_Box"
       },
       "widgets_values": [
         "Make it an (anime style) child with a golden sword, golden helmet, white shirt, "
@@ -132,7 +132,7 @@
     },
     {
       "id": 33,
-      "type": "Text box",
+      "type": "DF_Text_Box",
       "pos": [
         -400,
         300
@@ -159,7 +159,7 @@
       ],
       "title": "Qualitative Prompt",
       "properties": {
-        "Node name for S&R": "Text box"
+        "Node name for S&R": "DF_Text_Box"
       },
       "widgets_values": [
         "masterpiece, high quality, best quality, the most beautiful digital painting , imax format, high quality, best quality, the most beautiful image, sharp details, crisp details, hdr, 8k photo, sharp details, crisp details, 8k render, (ultra high quality:1.2)"
@@ -207,7 +207,7 @@
     },
     {
       "id": 67,
-      "type": "Text box",
+      "type": "DF_Text_Box",
       "pos": [
         -1480,
         60
@@ -229,7 +229,7 @@
       ],
       "title": "Info",
       "properties": {
-        "Node name for S&R": "Text box"
+        "Node name for S&R": "DF_Text_Box"
       },
       "widgets_values": [
         "INTRODUCTION:\n\nThis ComfyUI workflow is made for video Style Transfers. I use it to turn Live-Action videos into Anime, inspired by Corridor Crew's Anime Rock Paper Scissors series. With a clean workflow and easily adjustable settings, you'll have a lot of fun rendering all sorts of stuff! Enjoy!\n\n\n\n\nHOW TO INSTALL: \n\n- Make sure you have the Comfyui Manager. \n- Click on ''Manager'' to open the manager menu.\n- First, click on ''Update All''.\n- Click on ''Install Missing Nodes''.\n- Restart ComfyUI\n- Done!\n(it will always give an error about ''Resoluti0n''. Don't worry about that error!)\n\n\n\n\n\nHOW TO USE:\n\nInput & Output folder + Resolution\n\nYou can import image sequences with the blue node, next to this text box, called ''Import Image Sequence''. Under that node, you can see the ''Resolution'' node. Exporting is done in the ''Export Image Sequence'' which is under the ''Resolution'' node.\n\n\n\nPrompts\n\nThe green nodes represent the prompt-nodes. All you have to do is describe your original video in the ''Image Description'' Node. You don't have to change anything in the ''Qualitative Prompt'' node. The negative prompt (red node) can be used to extract things from the image after you've finished your first render. The ''Auto Prompter'' node describes the first frame of your video automatically. Change the threshold and character_threshold depending on the original video.\n\n\n\nModels & lora's\n\nYou can choose a checkpoint in the purple node ''Efficient Loader'',\nby changing the ''ckpt name''. The brown and red nodes are for the lora's. You can choose to add both style and character specific lora's.\n\n\n\n\n\nBEST SETTINGS: (NVIDIA RTX 4070)\n\nI always use these settings as a starting point:\n\nResolution - 1000x417 (12:5 aspect ratio) OR 960x540 (16:9 aspect ratio)\nImage Description - ''Make it an (anime style) [person] with a [object], [background].\nCR OP Face - 1.20\nCR OP Body - 1.20\nCR Animeline - 0.50\nCR depth - 0.90 (& end percent 0.350)\nCR Tile - 0.90 (& end percent 0.250)\nCR ip2p - 0.25\nKsampler CFG - 13.5 (anywhere between 10 and 15)\nKsampler denoise - 0.50 (turn it up or down for more or less creative freedom by the AI)\nStyle Lora - Depends on the lora itself and your style preference\nCharacter Lora - Depends on how much your character is in frame.\n\n\n\nQueue Prompt!\n"
@@ -1647,7 +1647,7 @@
     },
     {
       "id": 68,
-      "type": "Text box",
+      "type": "DF_Text_Box",
       "pos": [
         -1480,
         1090
@@ -1669,7 +1669,7 @@
       ],
       "title": "Credits",
       "properties": {
-        "Node name for S&R": "Text box"
+        "Node name for S&R": "DF_Text_Box"
       },
       "widgets_values": [
         "Created by itskevea.\nI do 1 on 1 coaching sessions, build workflows, do renders, etc.! \nInterested? Message me on Discord itskevea OR email itskevea@gmail.com\n"
