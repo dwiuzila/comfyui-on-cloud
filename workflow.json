@@ -125,7 +125,7 @@
         "Node name for S&R": "DF_Text_Box"
       },
       "widgets_values": [
-        "Make it an (anime style) child with a golden sword, golden helmet, white shirt, "
+        "Make it an (anime style) [person] with a [object], [background], "
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -200,7 +200,7 @@
       "title": "Import Image Sequence",
       "properties": {},
       "widgets_values": [
-        "C:\\AI\\Projects\\_Scenery\\kidplay\\og"
+        "/home/alber.suzila/ComfyUI/input/frames"
       ],
       "color": "#223",
       "bgcolor": "#335"
@@ -356,7 +356,7 @@
       },
       "widgets_values": [
         "",
-        "",
+        "false",
         "false",
         "",
         "",
@@ -423,7 +423,7 @@
         "Node name for S&R": "LoadImagesFromDirectory"
       },
       "widgets_values": [
-        "C:\\AI\\Projects\\_Scenery\\kidplay\\og",
+        "/home/alber.suzila/ComfyUI/input/frames",
         0,
         0
       ],
@@ -483,7 +483,7 @@
         "Node name for S&R": "LoadImagesFromDirectory"
       },
       "widgets_values": [
-        "C:\\AI\\Projects\\_Scenery\\kidplay\\og",
+        "/home/alber.suzila/ComfyUI/input/frames",
         1,
         0
       ],
@@ -531,8 +531,8 @@
       },
       "widgets_values": [
         "nearest-exact",
-        1000,
-        563,
+        960,
+        540,
         "disabled"
       ],
       "color": "#223",
@@ -1211,7 +1211,7 @@
         "Node name for S&R": "ADE_AnimateDiffLoaderWithContext"
       },
       "widgets_values": [
-        "temporaldiff-v1-animatediff.ckpt",
+        "temporaldiff-v1-animatediff.safetensors",
         "sqrt_linear (AnimateDiff)"
       ],
       "color": "#323",
@@ -1628,7 +1628,7 @@
         "Node name for S&R": "Image Save"
       },
       "widgets_values": [
-        "C:\\AI\\Projects\\_Scenery\\kidplay\\fusion",
+        "/home/alber.suzila/ComfyUI/output",
         "kidplay",
         "_",
         4,
