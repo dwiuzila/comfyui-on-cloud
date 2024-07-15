@@ -6,7 +6,6 @@ USER_HOME=$(eval echo ~$USER_NAME)
 
 # install packages
 pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
-pip install onnxruntime-gpu==1.18.1
 
 # install ComfyUI
 git clone https://github.com/comfyanonymous/ComfyUI
