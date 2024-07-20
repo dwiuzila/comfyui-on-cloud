@@ -1,69 +1,20 @@
 {
-  "last_node_id": 67,
-  "last_link_id": 69,
+  "last_node_id": 68,
+  "last_link_id": 70,
   "nodes": [
-    {
-      "id": 52,
-      "type": "ADE_StandardUniformContextOptions",
-      "pos": [
-        1689,
-        830
-      ],
-      "size": {
-        "0": 327.6000061035156,
-        "1": 222
-      },
-      "flags": {},
-      "order": 0,
-      "mode": 0,
-      "inputs": [
-        {
-          "link": null,
-          "name": "prev_context",
-          "type": "CONTEXT_OPTIONS"
-        },
-        {
-          "link": null,
-          "name": "view_opts",
-          "type": "VIEW_OPTS"
-        }
-      ],
-      "outputs": [
-        {
-          "links": [
-            40
-          ],
-          "name": "CONTEXT_OPTS",
-          "shape": 3,
-          "type": "CONTEXT_OPTIONS"
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "ADE_StandardUniformContextOptions"
-      },
-      "widgets_values": [
-        16,
-        1,
-        4,
-        "pyramid",
-        false,
-        0,
-        1
-      ]
-    },
     {
       "id": 59,
       "type": "SamplerLCMCycle",
       "pos": [
-        2136,
-        1447
+        1232.4000244140625,
+        80
       ],
       "size": {
         "0": 315,
         "1": 130
       },
       "flags": {},
-      "order": 1,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
@@ -89,8 +40,8 @@
       "id": 63,
       "type": "BNK_CLIPTextEncodeAdvanced",
       "pos": [
-        2068,
-        1198
+        1147.4000244140625,
+        759
       ],
       "size": {
         "0": 400,
@@ -129,8 +80,8 @@
       "id": 50,
       "type": "ADE_UseEvolvedSampling",
       "pos": [
-        2089,
-        773
+        782.4000244140625,
+        80
       ],
       "size": {
         "0": 315,
@@ -153,7 +104,7 @@
           "type": "M_MODELS"
         },
         {
-          "link": 40,
+          "link": 70,
           "name": "context_options",
           "slot_index": 2,
           "type": "CONTEXT_OPTIONS"
@@ -187,12 +138,12 @@
       "id": 60,
       "type": "LCMScheduler",
       "pos": [
-        2134,
-        1625
+        1232.4000244140625,
+        1042
       ],
       "size": {
         "0": 315,
-        "1": 58
+        "1": 82
       },
       "flags": {},
       "order": 11,
@@ -219,19 +170,20 @@
         "Node name for S&R": "LCMScheduler"
       },
       "widgets_values": [
-        10
+        10,
+        1
       ]
     },
     {
       "id": 49,
       "type": "ADE_ApplyAnimateDiffModelSimple",
       "pos": [
-        1703,
-        675
+        427.60003662109375,
+        613
       ],
       "size": {
         "0": 304.79998779296875,
-        "1": 106
+        "1": 114
       },
       "flags": {},
       "order": 6,
@@ -277,14 +229,17 @@
       ],
       "properties": {
         "Node name for S&R": "ADE_ApplyAnimateDiffModelSimple"
-      }
+      },
+      "widgets_values": [
+        ""
+      ]
     },
     {
       "id": 56,
       "type": "VAEDecode",
       "pos": [
-        2974,
-        887
+        2002.6000366210938,
+        80
       ],
       "size": {
         "0": 210,
@@ -325,15 +280,15 @@
       "id": 61,
       "type": "EmptyLatentImage",
       "pos": [
-        2137,
-        1736
+        1232.4000244140625,
+        290
       ],
       "size": {
         "0": 315,
         "1": 106
       },
       "flags": {},
-      "order": 2,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
@@ -349,8 +304,8 @@
         "Node name for S&R": "EmptyLatentImage"
       },
       "widgets_values": [
-        512,
-        512,
+        1280,
+        720,
         120
       ]
     },
@@ -358,12 +313,12 @@
       "id": 57,
       "type": "VHS_VideoCombine",
       "pos": [
-        3227,
-        954
+        2262.6000366210938,
+        80
       ],
       "size": [
         338.5048522949219,
-        622.5048522949219
+        310
       ],
       "flags": {},
       "order": 14,
@@ -380,8 +335,13 @@
           "link": null
         },
         {
-          "name": "batch_manager",
+          "name": "meta_batch",
           "type": "VHS_BatchManager",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
           "link": null
         }
       ],
@@ -423,15 +383,15 @@
       "id": 47,
       "type": "ADE_LoadAnimateDiffModel",
       "pos": [
-        1340,
-        606
+        50,
+        258
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 3,
+      "order": 2,
       "mode": 0,
       "inputs": [
         {
@@ -455,22 +415,22 @@
         "Node name for S&R": "ADE_LoadAnimateDiffModel"
       },
       "widgets_values": [
-        "sd15_t2v_beta_motion.ckpt"
+        "AnimateLCM_sd15_t2v.ckpt"
       ]
     },
     {
       "id": 51,
       "type": "CheckpointLoaderSimple",
       "pos": [
-        1693,
-        523
+        50,
+        80
       ],
       "size": {
         "0": 315,
         "1": 98
       },
       "flags": {},
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "outputs": [
         {
@@ -502,15 +462,15 @@
         "Node name for S&R": "CheckpointLoaderSimple"
       },
       "widgets_values": [
-        "SD1.5/dreamshaper_8.safetensors"
+        "toonyou_beta6.safetensors"
       ]
     },
     {
       "id": 64,
       "type": "LoraLoader",
       "pos": [
-        2086,
-        597
+        417.4000244140625,
+        406
       ],
       "size": {
         "0": 315,
@@ -557,7 +517,7 @@
         "Node name for S&R": "LoraLoader"
       },
       "widgets_values": [
-        "LCM_LoRA/sd15_t2v_beta_lora.safetensors",
+        "AnimateLCM_sd15_t2v_lora.safetensors",
         1,
         1
       ]
@@ -566,15 +526,15 @@
       "id": 67,
       "type": "VAELoader",
       "pos": [
-        2585,
-        1204
+        1637.6000366210938,
+        80
       ],
       "size": {
         "0": 315,
         "1": 58
       },
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "outputs": [
         {
@@ -597,8 +557,8 @@
       "id": 58,
       "type": "SamplerCustom",
       "pos": [
-        2550,
-        917
+        1597.4000244140625,
+        218
       ],
       "size": {
         "0": 355.20001220703125,
@@ -667,7 +627,7 @@
       },
       "widgets_values": [
         true,
-        999889999,
+        0,
         "fixed",
         1.8
       ]
@@ -676,8 +636,8 @@
       "id": 62,
       "type": "BNK_CLIPTextEncodeAdvanced",
       "pos": [
-        2069,
-        955
+        1147.4000244140625,
+        477
       ],
       "size": {
         "0": 400,
@@ -712,6 +672,57 @@
         "mean",
         "A1111"
       ]
+    },
+    {
+      "id": 68,
+      "type": "ADE_LoopedUniformContextOptions",
+      "pos": [
+        415,
+        80
+      ],
+      "size": {
+        "0": 317.4000244140625,
+        "1": 246
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prev_context",
+          "type": "CONTEXT_OPTIONS",
+          "link": null
+        },
+        {
+          "name": "view_opts",
+          "type": "VIEW_OPTS",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONTEXT_OPTS",
+          "type": "CONTEXT_OPTIONS",
+          "links": [
+            70
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ADE_LoopedUniformContextOptions"
+      },
+      "widgets_values": [
+        16,
+        1,
+        4,
+        true,
+        "pyramid",
+        false,
+        0,
+        1
+      ]
     }
   ],
   "links": [
@@ -730,14 +741,6 @@
       50,
       1,
       "M_MODELS"
-    ],
-    [
-      40,
-      52,
-      0,
-      50,
-      2,
-      "CONTEXT_OPTIONS"
     ],
     [
       48,
@@ -858,10 +861,26 @@
       56,
       1,
       "VAE"
+    ],
+    [
+      70,
+      68,
+      0,
+      50,
+      2,
+      "CONTEXT_OPTIONS"
     ]
   ],
   "groups": [],
   "config": {},
-  "extra": {},
+  "extra": {
+    "ds": {
+      "scale": 0.6830134553650705,
+      "offset": [
+        359.3907653658208,
+        155.1576212365865
+      ]
+    }
+  },
   "version": 0.4
 }
